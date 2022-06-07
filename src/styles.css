@@ -22,7 +22,7 @@ button:hover {
 }
 
 li p {
-  margin-right: 8px;
+  margin: 0 8px 0 0;
 }
 
 .input-area {
