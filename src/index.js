@@ -38,11 +38,9 @@ const onClickAdd = () => {
     backButton.innerText = "戻す";
 
     //liタグの子要素に各要素を設定
-    // console.log(addTarget);
-    // let child = document.createElement("div");
     addTarget.prepend(document.createElement("div"));
-    addTarget.appendChild(p);
-    // addTarget.appendChild(backButton);
+    addTarget.querySelector("div").appendChild(p);
+    addTarget.querySelector("div").appendChild(backButton);
     console.log(addTarget);
   });
 
