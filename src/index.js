@@ -36,12 +36,20 @@ const onClickAdd = () => {
     //buttonタグ生成
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
+    backButton.addEventListener("click", () => {
+      // 押された戻すボタンの親タグ(li)を完了リストから削除
+      const deleteTarget = backButton.closest(".list-row");
+      document.getElementById("complete-list").removeChild(deleteTarget);
+    });
 
     //liタグの子要素に各要素を設定
     addTarget.prepend(document.createElement("div"));
     addTarget.querySelector("div").appendChild(p);
     addTarget.querySelector("div").appendChild(backButton);
-    console.log(addTarget);
+    // console.log(addTarget);
+
+    //完了リストに追加
+    document.getElementById("complete-list").appendChild(addTarget);
   });
 
   //button(削除)タグ生成
